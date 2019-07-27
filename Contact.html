@@ -1,0 +1,182 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Julia Counselling - Rooted Therapy">
+    <meta name="author" content="Julia - Rooted Therapy">
+    <title>Contact - Julia @ Rooted Connections Therapy</title>
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/custom-theme.css?v=5" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Rooted Connections Therapy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+               Menu <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/About.html">About</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/WhatToExpect.html">What To Expect</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Contact.html">Contact</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--<partial name="_CookieConsentPartial" />-->
+
+
+
+    
+
+<!-- Header - set the background image for the header in the line below -->
+<header class="py-5 bg-image-full" style="background-image: url('/images/leaves-wallpaper.jpg');">
+    <!-- <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt=""> -->
+</header>
+
+<!-- Content section -->
+<section class="py-5">
+    <div class="container">
+        <h1>Contact</h1>
+
+        <p>You can book a session/contact me by email at <a href="#"
+               data-contact="julia@"
+               onfocus="this.href = 'mailto:' + this.dataset.contact + 'rootedconnectionstherapy.com'">
+              julia@rootedconnectionstherapy.com</a> <!-- or phone on <a href="tel:07888">07888</a> --></p>
+
+
+        <address>
+            <img src="/images/ook-logo.png"  width="30" alt="ookushana logo"/> ookushana<br/>
+            94b Harrogate Rd<br />
+            Leeds<br />
+            LS7 4LZ
+        </address>
+
+        <p>Ookushana is just up the lane in between Bet Fred and Mod Salon on Harrogate Road.</p>
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+        <style>
+
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+            .map-wrapper
+            {
+                position:relative;
+                width:100%;
+                min-height:400px;
+            }
+
+        </style>
+
+        <div class="map-wrapper">
+        <div id='map'></div>
+            </div>
+        <script>mapboxgl.accessToken = 'pk.eyJ1Ijoic25pZW11dGgiLCJhIjoiY2p3N3R6N2hpMGRmazRjbzc5anJib3FkdiJ9.doIU3E-S8txAAMgUCQg3mg';
+            var map = new mapboxgl.Map({
+                container: 'map', // container id
+                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                center: [-1.537090, 53.827730], // starting position [lng, lat]
+                zoom: 15 // starting zoom
+            });
+            map.addControl(new mapboxgl.NavigationControl());
+            map.on('load', function() {
+                map.loadImage('/images/ook-logo.png', function(error, image) {
+                if (error) throw error;
+                map.addImage('ook', image);
+                map.addLayer({
+                "id": "points",
+                "type": "symbol",
+                "source": {
+                "type": "geojson",
+                "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                "coordinates": [-1.537090, 53.827730]
+                }
+                }]
+                }
+                },
+                "layout": {
+                "icon-image": "ook",
+                "icon-size": 0.05
+                }
+                });
+                });
+                });
+
+            </script>
+
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-3 text-center text-white">
+                ookushana,
+                94b Harrogate Rd,
+                Leeds,
+                LS7 4LZ
+
+                <br />
+               <!-- Tel: <a href="tel:07888">074888</a> <br /> -->
+                Email: <a href="#"
+               data-contact="julia@"
+               onfocus="this.href = 'mailto:' + this.dataset.contact + 'rootedconnectionstherapy.com'">julia@rootedconnectionstherapy.com</a>
+                <br />
+
+                Instagram: <a href="https://www.instagram.com/rootedconnectionstherapy/">rootedconnectionstherapy</a>
+
+            </p>
+
+
+            <p class="m-0 text-center text-white">&copy; 2019 - Julia @ Rooted Connections Therapy</p>
+          <!--  <p class="m-0 text-center text-white"><a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a> | <a href="/privacy">Privacy</a></p> -->
+
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+</html>
