@@ -1,18 +1,18 @@
-/*!
+﻿/*!
  * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template-overviews/full-width-pics)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
  */
 body {
-  padding-top: 56px;
+    padding-top: 56px;
 }
 
 .bg-image-full {
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 
@@ -31,3 +31,27 @@ a {
 h1 {
     color: #005053;
 }
+
+ul.highlight-listing li {
+    list-style-type: none;
+}
+
+ul.highlight-listing {
+    padding-left: 5px;
+}
+
+    ul.highlight-listing i {
+        margin-right: 5px;
+    }
+
+    ul.highlight-listing li .fa-seedling {
+        color: green;
+    }
+
+    ul.highlight-listing li .fa-hand-holding-heart {
+        color: #ed3833;
+    }
+
+    ul.highlight-listing li .fa-eye {
+        color: purple;
+    }
