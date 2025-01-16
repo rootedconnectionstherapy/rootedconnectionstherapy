@@ -73,11 +73,11 @@
 
 
         <address>
-            <!--<img src="/images/ook-logo.png"  width="30" alt="ookushana logo"/> ookushana<br/>
-            94b Harrogate Rd<br />
+            <!--<img src="/images/ook-logo.png"  width="30" alt="ookushana logo"/> ookushana<br/>-->            
+            Sagi Shalom Counselling and Psychotherapy</br>
+            1 Primley Gardens<br />
             Leeds<br />
-            LS7 4LZ-->
-            North Leeds
+            LS17 7HT            
         </address>
 
 
@@ -107,12 +107,12 @@
             var map = new mapboxgl.Map({
                 container: 'map', // container id
                 style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-                center: [-1.537090, 53.827730], // starting position [lng, lat]
+                center: [-1.540430444174396, 53.85279407785317], // starting position [lng, lat]
                 zoom: 15 // starting zoom
             });
             map.addControl(new mapboxgl.NavigationControl());
             map.on('load', function() {
-                map.loadImage('/images/ook-logo.png', function(error, image) {
+                map.loadImage('/images/profile-pic.jpg', function(error, image) {
                 if (error) throw error;
                 map.addImage('ook', image);
                 map.addLayer({
@@ -126,7 +126,7 @@
                 "type": "Feature",
                 "geometry": {
                 "type": "Point",
-                "coordinates": [-1.537090, 53.827730]
+                "coordinates": [-1.540430444174396, 53.85279407785317]
                 }
                 }]
                 }
