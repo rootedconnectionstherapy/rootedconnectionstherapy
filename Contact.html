@@ -87,7 +87,7 @@
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
         <style>
 
-            #map {
+            .map-item {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -103,11 +103,11 @@
         </style>
 
         <div class="map-wrapper">
-        <div id='map'></div>
+        <div id='shalom-map' class="map-item"></div>
             </div>
         <script>mapboxgl.accessToken = 'pk.eyJ1Ijoic25pZW11dGgiLCJhIjoiY2p3N3R6N2hpMGRmazRjbzc5anJib3FkdiJ9.doIU3E-S8txAAMgUCQg3mg';
             var map = new mapboxgl.Map({
-                container: 'map', // container id
+                container: 'shalom-map', // container id
                 style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
                 center: [-1.540430444174396, 53.85279407785317], // starting position [lng, lat]
                 zoom: 15 // starting zoom
@@ -151,6 +151,47 @@
 Leeds <br />
 LS6 4JP         
         </address>
+         <div class="map-wrapper">
+        <div id='oldsurgery-map' class="map-item"></div>
+            </div>
+        <script>mapboxgl.accessToken = 'pk.eyJ1Ijoic25pZW11dGgiLCJhIjoiY2p3N3R6N2hpMGRmazRjbzc5anJib3FkdiJ9.doIU3E-S8txAAMgUCQg3mg';
+            var map = new mapboxgl.Map({
+                container: 'oldsurgery-map', // container id
+                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                center: [-1.566653, 53.828701], // starting position [lng, lat]
+                zoom: 15 // starting zoom
+            });
+            map.addControl(new mapboxgl.NavigationControl());
+            map.on('load', function() {
+                map.loadImage('/images/profile-pic.jpg', function(error, image) {
+                if (error) throw error;
+                map.addImage('ook', image);
+                map.addLayer({
+                "id": "points",
+                "type": "symbol",
+                "source": {
+                "type": "geojson",
+                "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                "type": "Feature",
+                "geometry": {
+                "type": "Point",
+                "coordinates": [-1.566653, 53.828701]
+                }
+                }]
+                }
+                },
+                "layout": {
+                "icon-image": "ook",
+                "icon-size": 0.05
+                }
+                });
+                });
+                });
+
+            </script>
+</div>
         </div>
         </div>
     </div>
