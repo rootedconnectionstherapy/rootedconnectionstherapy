@@ -111,7 +111,7 @@
             });
             map.addControl(new mapboxgl.NavigationControl());
             map.on('load', function() {
-                map.loadImage('/images/profile-pic.jpg', function(error, image) {
+                map.loadImage('/images/profile-pic-upsidedown.jpg', function(error, image) {
                 if (error) throw error;
                 map.addImage('profile-pic1', image);
                 map.addLayer({
@@ -160,9 +160,9 @@ LS6 4JP
             });
             map2.addControl(new mapboxgl.NavigationControl());
             map2.on('load', function() {
-                map2.loadImage('/images/profile-pic.jpg', function(error, image) {
+                map2.loadImage('/images/profile-pic-upsidedown.jpg', function(error, image) {
                 if (error) throw error;
-                map.addImage('profile-pic2', image);
+                map2.addImage('profile-pic2', image);
                 map2.addLayer({
                 "id": "points2",
                 "type": "symbol",
