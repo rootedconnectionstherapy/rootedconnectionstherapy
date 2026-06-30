@@ -152,18 +152,18 @@ LS6 4JP
         <div id='oldsurgery-map' class="map-item"></div>
             </div>
         <script>mapboxgl.accessToken = 'pk.eyJ1Ijoic25pZW11dGgiLCJhIjoiY2p3N3R6N2hpMGRmazRjbzc5anJib3FkdiJ9.doIU3E-S8txAAMgUCQg3mg';
-            var map = new mapboxgl.Map({
+            var map2 = new mapboxgl.Map({
                 container: 'oldsurgery-map', // container id
                 style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
                 center: [-1.566653, 53.828701], // starting position [lng, lat]
                 zoom: 15 // starting zoom
             });
-            map.addControl(new mapboxgl.NavigationControl());
-            map.on('load', function() {
-                map.loadImage('/images/profile-pic.jpg', function(error, image) {
+            map2.addControl(new mapboxgl.NavigationControl());
+            map2.on('load', function() {
+                map2.loadImage('/images/profile-pic.jpg', function(error, image) {
                 if (error) throw error;
                 map.addImage('profile-pic2', image);
-                map.addLayer({
+                map2.addLayer({
                 "id": "points2",
                 "type": "symbol",
                 "source": {
